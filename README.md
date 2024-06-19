@@ -21,8 +21,11 @@ The agent utilizes several tools to interact with the Neo4j graph database effec
    - Retrieves data about movies or individuals, ensuring the agent has access to the latest and most relevant information.
 2. **Recommendation Tool**:
    - Provides movie recommendations based upon user preferences and input.
-3. **Memory Tool**:
-   - Stores information about user preferences in the knowledge graph, allowing for a personalized experience over multiple interactions.
+3. **Plot Tool**:
+   - Finds movies based by their description using vector similarity search.
+4. **Aggregation Tool**:
+   - Calculates statistics by generating Cypher statements.
+   
 
 ## Environment Setup
 
@@ -46,19 +49,8 @@ This project contains the following services wrapped as docker containers
 3. **UI**:
    - Simple streamlit chat user interface. Available on `localhost:8501`.
 
-## Populating with data
-
-If you want to populate the DB with an example movie dataset, you can run [`ingest.py`](api/ingest.py).
-The script imports information about movies and their rating by users. 
-To run within the api docker container (recommended) do the following:
-```bash
-# access container shell
-docker exec -it <container id for llm-movieagent-api> bash
-# run script
-python ingest.py
-```
-Additionally, the script creates two [fulltext indices](https://neo4j.com/docs/cypher-manual/current/indexes-for-full-text-search/), which are used to map information from user input to the database.
-The dataset is based on the MovieLens dataset, which is also available as the `Recommendation` project in [Neo4j Sandbox](https://sandbox.neo4j.com/?usecase=recommendations).
+## Populating with data 
+TBD
 
 ## Contributions
 
