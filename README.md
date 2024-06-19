@@ -1,4 +1,5 @@
 # llm-movieagent
+### __:warning: This Repo is Work in Progress :warning:__
 
 This project is designed to implement an agent capable of interacting with a graph database like Neo4j through a semantic layer using OpenAI function calling.
 The semantic layer equips the agent with a suite of robust tools, allowing it to interact with the graph database based on the user's intent. Read more in the [blog post](https://towardsdatascience.com/enhancing-interaction-between-language-models-and-graph-databases-via-a-semantic-layer-0a78ad3eba49).
